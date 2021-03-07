@@ -15,6 +15,9 @@ services:
     hostname: "unbound"
     volumes:
       - /home/users/revisor/www/filter/unbound:/opt/unbound/etc/unbound/
+    ports:
+      - 533:53/udp
+      - 533:53/tcp
     networks:
       private_network:
         ipv4_address: 10.2.0.200
